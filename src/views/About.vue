@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Vue } from "vue-property-decorator";
 export default class About extends Vue {
-  options = [
+  private options: Array<object> = [
     {
       value: "选项1",
       label: "黄金糕"
@@ -39,6 +39,6 @@ export default class About extends Vue {
       label: "北京烤鸭"
     }
   ];
-  value = "";
+  private value: string = "选项2";
 }
 </script>
