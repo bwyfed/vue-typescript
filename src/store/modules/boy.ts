@@ -26,7 +26,7 @@ const actions: ActionTree<BoyState, RootState> = {
         type: "warning"
       });
     } else {
-      commit("updateCurentFlower", -params.sendNumber);
+      commit("updateCurrentFlower", -params.sendNumber);
       commit("girl/updateCurrentFlower", params.sendNumber, { root: true });
     }
   },
