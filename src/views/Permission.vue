@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h1>This is an permission page</h1>
     <el-button type="primary">主要按钮</el-button>
     <el-button type="success">成功按钮</el-button>
     <el-select v-model="value" placeholder="请选择">
@@ -12,28 +12,13 @@
       >
       </el-option>
     </el-select>
-    <el-row>
-      <el-col :span="12">
-        <boy-comp class="boy"></boy-comp>
-      </el-col>
-      <el-col :span="12">
-        <girl-comp class="girl"></girl-comp>
-      </el-col>
-    </el-row>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import BoyComp from "@/components/boy.vue";
-import GirlComp from "@/components/girl.vue";
 
-@Component({
-  components: {
-    BoyComp,
-    GirlComp
-  }
-})
-export default class About extends Vue {
+@Component
+export default class Permission extends Vue {
   private options: Array<object> = [
     {
       value: "选项1",
@@ -59,19 +44,3 @@ export default class About extends Vue {
   private value: string = "选项2";
 }
 </script>
-<style lang="less" scoped>
-.el-row,
-.el-col {
-  height: 300px;
-  color: white;
-  font-size: 25px;
-}
-.boy {
-  height: 100%;
-  background-color: #409eff;
-}
-.girl {
-  height: 100%;
-  background-color: #f56c6c;
-}
-</style>
