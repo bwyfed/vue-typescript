@@ -3,6 +3,7 @@ import "normalize.css/normalize.css";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import "./icons";
 import { Component } from "vue-property-decorator";
 
 Vue.config.productionTip = false;
